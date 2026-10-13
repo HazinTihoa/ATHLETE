@@ -161,7 +161,9 @@ section.tgmm-demo{grid-template-columns:minmax(0,1fr) minmax(0,520px);justify-co
 
 /* Simulated rallies: two clips side by side before the interactive demo */
 .sim-rallies{padding:8px 0 56px}
-.sim-rallies>p:not(.section-label){color:var(--muted);font-size:16px;max-width:740px}
+.sim-rallies>h2{margin-bottom:12px}
+.sim-rallies>.sim-rallies-subtitle{font-size:clamp(18px,2vw,22px);font-weight:500;line-height:1.4;color:var(--muted);margin-bottom:16px}
+.sim-rallies>p:not(.sim-rallies-subtitle){color:var(--muted);font-size:16px;max-width:740px}
 .sim-rally-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
 .sim-rally-video{margin:0;aspect-ratio:1280/542;border-radius:12px;overflow:hidden;background:#13212d}
 .sim-rally-video video{object-fit:cover}
