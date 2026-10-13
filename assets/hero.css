@@ -288,3 +288,13 @@ section.tgmm-demo{align-items:start;row-gap:28px}
 .rally-centered .demo-row-copy{margin-bottom:22px}
 .rally-centered .rally-video{aspect-ratio:16/9}
 @media(max-width:700px){.demo-row.rally-centered{padding-top:28px}}
+
+/* Keep the enlarged paper title within its band at all viewport widths. */
+.hero-cinematic .hero-copy{max-width:1600px}
+.hero-cinematic .hero-copy .hero-paper-title{font-size:clamp(20px,2.5vw,36px)}
+@media(max-width:900px){
+.hero-cinematic .hero-copy .hero-paper-title{font-size:clamp(22px,3vw,28px);white-space:normal;text-wrap:balance}
+section.tgmm-demo{grid-template-columns:minmax(0,1fr)}
+.tgmm-demo-copy{min-width:0}
+section.tgmm-demo>figure{width:100%;max-width:620px;margin-inline:auto}
+}

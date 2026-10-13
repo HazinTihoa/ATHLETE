@@ -20,7 +20,7 @@ document.querySelectorAll('[data-rally-embed]').forEach(container => {
     cover.classList.add('is-loading');
     status.textContent = 'Loading simulation…';
     try {
-      await loadScript('embed-ui.js?v=help-panel-2');
+      await loadScript('embed-ui.js?v=2b1f546893a2');
       const ui = window.__ATHLETE_EMBED_UI__;
       const root = host.shadowRoot ?? host.attachShadow({mode:'open'});
       const style = document.createElement('style');
