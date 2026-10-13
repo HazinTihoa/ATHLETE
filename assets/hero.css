@@ -198,6 +198,93 @@ section.tgmm-demo{grid-template-columns:minmax(0,1fr) minmax(0,520px);justify-co
 @media(max-width:700px){.source-strip-two{margin-bottom:36px}}
 
 /* Keep the project name inline with the paper title. */
-.hero-cinematic .hero-copy .hero-paper-title{max-width:100%;margin:0;font-size:clamp(16px,1.9vw,26px);line-height:1.3;font-weight:500;letter-spacing:-.025em;white-space:nowrap;color:#f1f6ec;text-shadow:0 2px 24px #0008}
+.hero-cinematic .hero-copy .hero-paper-title{max-width:100%;margin:0;font-size:clamp(20px,2.6vw,36px);line-height:1.3;font-weight:500;letter-spacing:-.025em;white-space:nowrap;color:#f1f6ec;text-shadow:0 2px 24px #0008}
 .hero-paper-title strong{font-weight:800;color:#fff}
+@supports ((background-clip:text) or (-webkit-background-clip:text)){
+.hero-paper-title strong,.site-header .wordmark{background:linear-gradient(110deg,#fff 10%,#e4f2b2 55%,#bfdc7d 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;text-shadow:none;filter:drop-shadow(0 2px 8px #0008)}
+}
 @media(max-width:700px){.hero-cinematic .hero-copy .hero-paper-title{font-size:clamp(22px,5vw,28px);white-space:normal;text-wrap:balance}}
+
+/* Section subjects are primary headings; descriptive copy is secondary. */
+.main-content .module-title{font-size:clamp(28px,3.2vw,40px);line-height:1.2;font-weight:700;letter-spacing:-.035em;color:var(--ink);margin:0 0 14px}
+.main-content .subsection-title{font-size:clamp(24px,2.4vw,30px);line-height:1.25;font-weight:700;letter-spacing:-.025em;color:var(--ink);margin:0 0 12px}
+.main-content p.module-subtitle{font-size:clamp(16px,1.6vw,20px);font-weight:400;line-height:1.5;letter-spacing:0;color:var(--muted);margin:0 0 20px;max-width:760px;text-align:left}
+.overview>.module-title{margin-bottom:0}
+@media(max-width:700px){.main-content .module-title{font-size:28px}.main-content .subsection-title{font-size:24px}.main-content p.module-subtitle{font-size:16px;margin-bottom:16px}}
+
+/* Give the long TGMM heading the full module width. */
+section.tgmm-demo{row-gap:24px}
+.tgmm-demo>.module-title{grid-column:1/-1;margin-bottom:0}
+@media(max-width:700px){section.tgmm-demo{row-gap:18px}}
+
+/* Motion sources belong to the TGMM module, above its text/video row. */
+.tgmm-sources{grid-column:1/-1}
+.tgmm-sources .source-strip-two{margin-bottom:0}
+
+/* Compact TGMM hierarchy with aligned explanation and media. */
+section.tgmm-demo{align-items:start;row-gap:28px}
+.tgmm-heading{grid-column:1/-1}
+.tgmm-heading .module-title{margin-bottom:10px}
+.main-content .tgmm-heading p.module-subtitle{max-width:none;margin-bottom:0}
+.tgmm-sources .source-strip-label{margin-bottom:12px}
+.tgmm-sources .source-strip{border-top:0;padding:0 0 22px;gap:28px}
+.tgmm-sources .source-strip strong{font-size:28px}
+.tgmm-sources .source-strip>div{gap:16px}
+.tgmm-demo-copy>p{margin-bottom:0;font-size:16px;line-height:1.85}
+.tgmm-demo .tgmm-legend{display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:12px;font-size:12px;line-height:1.6}
+.tgmm-demo .tgmm-legend>span{display:inline-flex;align-items:center;gap:7px;font-weight:400;color:var(--muted)}
+.tgmm-legend i{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.ghost-blue{background:#67b9df}.ghost-green{background:#78b876}
+@media(max-width:700px){section.tgmm-demo{row-gap:20px}.tgmm-sources .source-strip{gap:18px;padding-bottom:18px}.tgmm-sources .source-strip>div{padding:0;gap:6px;border:0}.tgmm-demo-copy>p{font-size:14px}.tgmm-demo .tgmm-legend{gap:6px 16px}}
+
+.tgmm-demo-copy .tgmm-sources{margin-bottom:22px}
+.tgmm-demo-copy .source-strip{gap:16px;padding-bottom:18px}
+.tgmm-demo-copy .source-strip>div{align-items:flex-start;padding:0 12px;gap:12px}
+.tgmm-demo-copy .source-strip>div:first-child{padding-left:0}
+.tgmm-demo-copy .source-strip>div:last-child{padding-right:0}
+@media(max-width:700px){.tgmm-demo-copy .source-strip>div{padding:0}}
+
+/* Distribute the explanation across the video height on desktop. */
+.tgmm-demo-copy{align-self:stretch;display:flex;flex-direction:column;justify-content:space-between;gap:28px;padding-bottom:32px}
+.tgmm-demo-copy .tgmm-sources{margin-bottom:0}
+.tgmm-explanation{display:contents}
+.tgmm-explanation p{margin:0;font-size:16px;line-height:1.85}
+@media(max-width:700px){.tgmm-demo-copy{padding-bottom:0;gap:22px}.tgmm-explanation{display:grid;gap:16px}.tgmm-explanation p{font-size:14px}}
+
+/* Add breathing room above and below the motion-source entries. */
+.tgmm-demo-copy .source-strip-label{margin-bottom:22px}
+.tgmm-demo-copy .source-strip{padding-top:6px;padding-bottom:28px}
+@media(max-width:700px){.tgmm-demo-copy .source-strip-label{margin-bottom:18px}.tgmm-demo-copy .source-strip{padding-top:4px;padding-bottom:22px}}
+
+/* Keep the explanation close to the motion sources. */
+.tgmm-demo-copy{justify-content:flex-start;gap:32px;padding-bottom:0}
+@media(max-width:700px){.tgmm-demo-copy{gap:24px}}
+
+/* Center the return-test video, with statistics aligned to its two halves. */
+.single-shot-eval{max-width:860px;margin:0 auto;padding:8px 0 44px}
+.single-shot-heading{margin-bottom:22px}
+.single-shot-heading p{font-size:14px;color:var(--muted);margin:0;line-height:1.7}
+.single-shot-media{margin:0}
+.single-shot-media .serve-video{aspect-ratio:25/19;border-radius:12px;overflow:hidden;background:#0c1a16}
+.single-shot-media video{width:100%;height:100%;object-fit:contain}
+.single-shot-results{display:grid;grid-template-columns:1fr 1fr;margin-top:22px;gap:0;padding:22px 0;border-block:1px solid var(--line)}
+.single-shot-results article{padding:0 24px}
+.single-shot-results article+article{border-left:1px solid var(--line)}
+.single-shot-results h4{font-size:20px;font-weight:700;margin:0 0 18px;color:var(--ink)}
+.single-shot-results h4>span{display:block;font-size:11px;font-weight:400;color:var(--muted);margin-top:4px}
+.single-shot-results dl{display:grid;gap:14px;margin:0}
+.single-shot-results dl>div{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.single-shot-results dt{font-size:13px;color:var(--muted)}
+.single-shot-results dd{margin:0;text-align:right;white-space:nowrap}
+.single-shot-results dd strong{font-size:23px;font-weight:650;color:var(--ink)}
+.single-shot-results dd>span{font-size:11px;color:var(--muted);margin-left:10px}
+.single-shot-note{font-size:11px;color:var(--muted);margin:12px 0 0;line-height:1.6}
+.simulation-results{grid-template-columns:1fr;max-width:930px}
+.demo-row-copy .rally-record{font-size:14px}.rally-record strong{color:var(--ink)}
+@media(max-width:700px){.single-shot-eval{padding-bottom:30px}.single-shot-results article{padding:0 12px}.single-shot-results h4{font-size:17px}.single-shot-results dd strong{font-size:20px}.single-shot-results dd>span{display:block;margin:2px 0 0}.single-shot-results dt{font-size:11px}.single-shot-results dl>div{gap:6px}}
+
+/* Center the human–robot rally beneath its heading. */
+.demo-row.rally-centered{display:block;max-width:860px;margin-inline:auto;padding-top:40px}
+.rally-centered .demo-row-copy{margin-bottom:22px}
+.rally-centered .rally-video{aspect-ratio:16/9}
+@media(max-width:700px){.demo-row.rally-centered{padding-top:28px}}

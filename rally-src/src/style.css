@@ -66,3 +66,9 @@ aside h2{margin-bottom:22px}
 .actions button{padding:10px}
 @media(max-width:900px){.lab{grid-template-columns:minmax(0,1fr) 250px}#viewport{min-height:520px}}
 @media(max-width:650px){header{height:58px}main{padding:20px 3%}.lab{grid-template-columns:1fr}#viewport{min-height:420px}.scene-keys{font-size:9px}.trajectory-key{font-size:8px;gap:6px}.scene-bottom{left:10px;right:10px;bottom:10px}.actions button{padding:9px 6px}}
+
+/* Compact operation list beneath the controls. */
+.panel-instructions{margin:18px 0 0;padding:14px 0 0 15px;border-top:1px solid #e3e9df;color:#687c6c;font-size:11px;line-height:1.6}
+.panel-instructions li+li{margin-top:7px}
+.panel-instructions li::marker{color:#78b876}
+.panel-instructions kbd{padding:1px 4px;border:1px solid #d7dfd1;border-radius:3px;background:#f4f7f0;color:#355c45;font:600 10px/1.4 ui-monospace,monospace}
