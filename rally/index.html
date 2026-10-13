@@ -26,7 +26,7 @@
     <section id="viewport" aria-label="Interactive humanoid tennis simulation">
       <div class="scene-top"><span class="badge" id="state">Loading</span><span class="ball-speed">SPEED <strong id="ball-speed">0.00</strong> m/s</span></div>
       <div id="loading"><span class="spinner"></span><strong id="load-text">Loading court…</strong><p>First load may take a moment while the model and physics engine download.</p></div>
-      <div class="scene-bottom"><div class="scene-keys"><span>Click robot's side to set target · Drag the ball to apply force · Drag empty space to orbit</span><span class="trajectory-key"><i></i>predicted first flight <b></b>path traveled <em></em>drag tether</span></div><button id="view">Reset view</button></div>
+      <div class="scene-bottom"><div class="scene-keys"><span>Click robot's side to set target · Ctrl + left-button drag, then release to launch · Drag empty space to orbit</span><span class="trajectory-key"><i></i>predicted first flight <b></b>path traveled <em></em>drag tether</span></div><button id="view">Reset view</button></div>
     </section>
     <aside>
       <div class="panel-heading"><span class="eyebrow">SERVE SETUP</span><h2>Choose a landing point</h2></div>
@@ -34,7 +34,7 @@
       <label>Ball start · Y <output id="launch-y-value">0.00 m</output><input id="launch-y" type="range" min="-1.5" max="1.5" step=".05" value="0"></label>
       <div class="serve-preview" id="serve-preview" aria-live="polite">Target <strong>Calculating…</strong></div>
       <button id="serve" class="primary" disabled>Serve to target <span>SPACE ↗</span></button>
-      <p class="drag-help">Drag the ball to interact. <span class="cyan">Dashed cyan</span>: predicted path if released now. <span class="yellow">Yellow</span>: path already traveled. <span class="gold">Gold</span>: cursor tether.</p>
+      <p class="drag-help">Hold Ctrl and drag with the left mouse button, then release to launch the ball. <span class="cyan">Dashed cyan</span>: predicted path if released now. <span class="yellow">Yellow</span>: path already traveled. <span class="gold">Gold</span>: cursor tether.</p>
       <div class="actions"><button id="pause" disabled>Pause</button><button id="reset" disabled>Reset simulation</button></div>
     </aside>
   </div>
