@@ -106,3 +106,15 @@ metadata. The two camera shots are cropped to 16:9. `assets/hero.js` handles
 pause/play, offscreen and hidden-tab pausing, reduced-motion (playback stays
 opt-in), the header's solid state after scrolling, nav highlighting and section
 reveals. Run the homepage build script after editing the hero include.
+
+### Real-world gallery
+
+The demonstrations section ends with a two-column grid of ten short real-robot
+clips (`assets/video/gallery/gallery-01.mp4` to `gallery-10.mp4`, each with a
+`-poster.jpg`). They are 1280x720, 30 fps H.264 encodes with `+faststart`, no
+audio track and no source metadata, with the source pillarbox bars cropped;
+about 15 MB in total. Each clip uses `preload="none"` and plays muted while on
+screen. To add a clip, encode it the same way, append a `gallery-video` figure
+in `_includes/project-home.html` and add its slot to
+`assets/project/video-slots.json`.
+

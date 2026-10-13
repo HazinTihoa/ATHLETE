@@ -34,5 +34,55 @@
     "poster": "../video/sim-rally2-poster.jpg",
     "video": "../video/sim-rally2.mp4",
     "description": "Simulated rally 2 in MuJoCo (real time, silent)"
+  },
+  "gallery-01": {
+    "poster": "../video/gallery/gallery-01-poster.jpg",
+    "video": "../video/gallery/gallery-01.mp4",
+    "description": "Real-robot gallery clip 1 of 10 (720p, silent)"
+  },
+  "gallery-02": {
+    "poster": "../video/gallery/gallery-02-poster.jpg",
+    "video": "../video/gallery/gallery-02.mp4",
+    "description": "Real-robot gallery clip 2 of 10 (720p, silent)"
+  },
+  "gallery-03": {
+    "poster": "../video/gallery/gallery-03-poster.jpg",
+    "video": "../video/gallery/gallery-03.mp4",
+    "description": "Real-robot gallery clip 3 of 10 (720p, silent)"
+  },
+  "gallery-04": {
+    "poster": "../video/gallery/gallery-04-poster.jpg",
+    "video": "../video/gallery/gallery-04.mp4",
+    "description": "Real-robot gallery clip 4 of 10 (720p, silent)"
+  },
+  "gallery-05": {
+    "poster": "../video/gallery/gallery-05-poster.jpg",
+    "video": "../video/gallery/gallery-05.mp4",
+    "description": "Real-robot gallery clip 5 of 10 (720p, silent)"
+  },
+  "gallery-06": {
+    "poster": "../video/gallery/gallery-06-poster.jpg",
+    "video": "../video/gallery/gallery-06.mp4",
+    "description": "Real-robot gallery clip 6 of 10 (720p, silent)"
+  },
+  "gallery-07": {
+    "poster": "../video/gallery/gallery-07-poster.jpg",
+    "video": "../video/gallery/gallery-07.mp4",
+    "description": "Real-robot gallery clip 7 of 10 (720p, silent)"
+  },
+  "gallery-08": {
+    "poster": "../video/gallery/gallery-08-poster.jpg",
+    "video": "../video/gallery/gallery-08.mp4",
+    "description": "Real-robot gallery clip 8 of 10 (720p, silent)"
+  },
+  "gallery-09": {
+    "poster": "../video/gallery/gallery-09-poster.jpg",
+    "video": "../video/gallery/gallery-09.mp4",
+    "description": "Real-robot gallery clip 9 of 10 (720p, silent)"
+  },
+  "gallery-10": {
+    "poster": "../video/gallery/gallery-10-poster.jpg",
+    "video": "../video/gallery/gallery-10.mp4",
+    "description": "Real-robot gallery clip 10 of 10 (720p, silent)"
   }
 }
