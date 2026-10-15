@@ -2,7 +2,7 @@
   "hero-background": {
     "poster": "../video/hero-7strikes-poster.jpg",
     "video": "../video/hero-7strikes-1080.mp4",
-    "description": "Full-viewport muted looping background: real-world human\u2013robot rally, seven strikes (25 s)",
+    "description": "Full-viewport muted looping background: real-world human–robot rally, seven strikes (25 s)",
     "video_small": "../video/hero-7strikes-720.mp4"
   },
   "overview": {
@@ -18,7 +18,7 @@
   "human-robot-rallies": {
     "poster": "../video/hero-rally-poster.jpg",
     "video": "../video/rally-full-1080.mp4",
-    "description": "Multi-shot human\u2013robot rallies"
+    "description": "Multi-shot human–robot rallies"
   },
   "trajectory-guided-motion-matching": {
     "poster": "../video/tgmm-collection-poster.jpg",
