@@ -1,120 +1,29 @@
-# ATHLETE Project Page
+# ATHLETE — Public Project Page
 
-Project website for ATHLETE, with a shared static/Jekyll research layout and an interactive browser demo.
+Public project website for **ATHLETE: Learning Reactive Humanoid Tennis via Trajectory-Guided Motion Matching**.
 
-Website: https://hazintihoa.github.io/athlete.github.io/
+- Website: https://hazintihoa.github.io/ATHLETE/
+- Paper: https://arxiv.org/abs/2610.13572
+- Code: https://github.com/HazinTihoa/athlete-humanoid-tennis
+- Authors: Zhihao Tian, Zifan Wang, Enzheng Zhu, Xun Yang, Jialong Qin, Mengbo Wang, Junwei Liang.
 
-## Editing
+## Edit and preview
 
-- Edit `_includes/project-home.html` for the shared project content, `_includes/project-hero.html` for the full-viewport hero and `_layouts/project.html` for the page shell.
-- Edit `assets/project.css` for the research page styling.
-- Run `python3 scripts/build-homepage.py` after edits to regenerate the anonymous static `index.html`.
-- `index.md` uses the shared layout and include on GitHub Pages.
-- Edit `_config.yml` to change the title, description, and theme settings.
-- Add images, videos, and other public project assets as needed.
+- Edit `_includes/project-hero.html` for the title, authors and resource links.
+- Edit `_includes/project-home.html` for the research content.
+- Edit `_layouts/project.html` for the shared page shell.
+- Edit `assets/hero.css` and `assets/project.css` for styling.
+- Run `python3 scripts/build-homepage.py` after changes to regenerate the static preview and refresh asset versions.
+- Run `python3 -m http.server 8767`, then open http://localhost:8767/.
 
-## Publishing
+## Publish
 
-In the repository settings, select **Pages → Deploy from a branch → main → / (root)**.
+GitHub Pages uses the `main` branch and repository root. `index.md` loads the shared Jekyll layout and content. The generated `index.html` supports local static previews and is excluded from the Jekyll build.
 
-GitHub Pages rebuilds the site after changes are committed to `main`.
+This repository is a public copy of the original project website. The original `athlete.github.io` repository remains separate.
 
-## Interactive Rally Demo
+## Interactive demo
 
-Both the GitHub Pages homepage (`index.md`) and anonymous static homepage
-(`index.html`) load the demo directly into a Shadow DOM component as soon as the
-visitor scrolls within about 600 px of it (no start screen; visitors with Save-Data
-enabled get a manual Start button instead), and retain a
-standalone `./rally/` link. Relative URLs keep anonymous visitors
-on their current host. The demo runs MuJoCo, ONNX policy inference, and rendering
-in the visitor's browser; there is no inference server or analytics endpoint.
+The homepage loads the MuJoCo and ONNX demo directly into a Shadow DOM component when visitors scroll near it. The full-page demo is available at `rally/`. Model inference and simulation run in the visitor's browser.
 
-The demo includes ball dragging, serve controls, auto-serve, robot reset,
-real-time ball speed and an 8 m/s physical ball-speed cap. The cap changes
-trajectories above that speed. This is an interactive illustration, not a
-success-rate benchmark or hardware validation tool.
-
-### Rebuild
-
-```bash
-cd rally-src
-npm ci
-npm run build
-```
-
-The build restores the exact meshes/policy from the existing packed deployment.
-Development sources live in `rally-src/`; publishable artifacts live in `rally/`.
-Python reference observation/action frames are included for numerical checks:
-open `rally/?verify=1` to validate all 32 frames in the browser.
-
-### Anonymous hosting compatibility
-
-Anonymous GitHub serves project documents with an opaque-origin CSP sandbox.
-The build preserves that sandbox. Classic scripts load losslessly compressed
-resources from the same host; a classic Blob worker runs the bundled engines
-with in-memory WASM/model assets. No CORS bypass, same-origin permission,
-external identity-bearing host, or third-party model CDN is required.
-Hex encoding avoids textual identity anonymization altering encoded binary data.
-The compressed payload is about 17.1 MB before hex transport encoding; actual
-network transfer depends on the host's HTTP compression. The page downloads
-these resources only when the visitor approaches the embedded demo or opens its standalone page.
-Homepage embed styling and loading logic live in `assets/home-demo.css` and
-`assets/home-demo.js`. No iframe is used: the anonymous host combines an opaque-origin CSP sandbox
-with `X-Frame-Options: SAMEORIGIN`, which blocks nested document embedding.
-The component preserves these security headers and loads classic scripts from
-the same anonymous host. Its generated UI is `rally/embed-ui.js`.
-
-Anonymous GitHub may cache an earlier repository commit. A successful GitHub
-Pages update does not itself prove that the anonymous mirror has refreshed.
-
-Third-party licenses are included in `rally/licenses/`.
-
-## Research content and video placeholders
-
-The title, verbatim English abstract, source-skill counts, method descriptions,
-and results are taken from the canonical ATHLETE manuscript `root.tex` and its
-`tables/real_world_results.tex` and `tables/simulation_results.tex` (local snapshot
-September 17, 2026). Figure files are copied unchanged from that manuscript.
-Reported paper results are distinguished from the interactive browser checkpoint.
-No cross-method ranking or new experimental claim is introduced.
-
-The BOLT reference page informed the section ordering (overview, demonstrations,
-method, results); ATHLETE text and figures come from its own manuscript.
-
-Five future video positions use static paper figures and explicitly say
-“VIDEO COMING SOON / 图片占位”. They contain no fake playback controls.
-`assets/project/video-slots.json` maps slot IDs to posters. When videos arrive,
-replace the corresponding `data-video-slot` block with an HTML video player
-using `controls`, `playsinline`, `preload="none"`, and the existing poster.
-Use relative paths so the anonymous page does not send visitors to a named host.
-Regenerate `index.html` after changing the shared content. The Code button links
-to the anonymized repository at https://anonymous.4open.science/r/athlete-humanoid-tennis;
-do not publish a paper PDF link until its destination is supplied.
-
-### Hero background video
-
-The first screen plays a muted, looping 25 s cut of the real-world human–robot
-rally (`assets/video/hero-rally-1080.mp4`, with `hero-rally-720.mp4` for narrow
-screens or Save-Data). The poster `assets/video/hero-rally-poster.jpg` shows
-immediately and the video fades in once frames are playing. "Watch the rally"
-opens the full 38 s film (`assets/video/rally-full-1080.mp4`) in a dialog; that
-file is requested only when opened. The same film replaces the rally placeholder
-in the demonstrations section.
-
-All three encodes are H.264 with `+faststart`, no audio track and no source
-metadata. The two camera shots are cropped to 16:9. `assets/hero.js` handles
-pause/play, offscreen and hidden-tab pausing, reduced-motion (playback stays
-opt-in), the header's solid state after scrolling, nav highlighting and section
-reveals. Run the homepage build script after editing the hero include.
-
-### Real-world gallery
-
-The demonstrations section ends with a two-column grid of ten short real-robot
-clips (`assets/video/gallery/gallery-01.mp4` to `gallery-10.mp4`, each with a
-`-poster.jpg`). They are 1280x720, 30 fps H.264 encodes with `+faststart`, no
-audio track and no source metadata, with the source pillarbox bars cropped;
-about 15 MB in total. Each clip uses `preload="none"` and plays muted while on
-screen. To add a clip, encode it the same way, append a `gallery-video` figure
-in `_includes/project-home.html` and add its slot to
-`assets/project/video-slots.json`.
-
+Keep asset URLs relative so images, videos, model files and scripts work under the `/ATHLETE/` GitHub Pages path. Update source files in `rally-src/` together with the generated files in `rally/` when changing the demo.

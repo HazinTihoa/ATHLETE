@@ -3,9 +3,9 @@ description: Learning humanoid tennis skills
 theme: jekyll-theme-cayman
 show_downloads: false
 url: https://hazintihoa.github.io
-baseurl: /athlete.github.io
+baseurl: /ATHLETE
 
-# Anonymous GitHub serves this static entry directly; keep the original Jekyll homepage.
+# Build GitHub Pages from the shared Jekyll homepage.
 exclude:
   - index.html
   - rally-src

@@ -298,3 +298,7 @@ section.tgmm-demo{grid-template-columns:minmax(0,1fr)}
 .tgmm-demo-copy{min-width:0}
 section.tgmm-demo>figure{width:100%;max-width:620px;margin-inline:auto}
 }
+
+/* Public paper page: keep author names readable at every viewport. */
+.hero-cinematic .hero-authors{max-width:1050px;font-size:clamp(14px,1.2vw,18px);line-height:1.7;text-wrap:balance}
+.hero-cinematic .hero-cta{flex-wrap:wrap;gap:12px}
