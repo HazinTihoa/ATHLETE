@@ -302,3 +302,12 @@ section.tgmm-demo>figure{width:100%;max-width:620px;margin-inline:auto}
 /* Public paper page: keep author names readable at every viewport. */
 .hero-cinematic .hero-authors{max-width:1050px;font-size:clamp(14px,1.2vw,18px);line-height:1.7;text-wrap:balance}
 .hero-cinematic .hero-cta{flex-wrap:wrap;gap:12px}
+
+/* Authorship and shared affiliation on the public paper page. */
+.hero-publication{width:100%;max-width:1200px;margin-top:20px}
+.hero-cinematic .hero-publication .hero-authors{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px;max-width:none;margin:0;font-size:clamp(16px,1.45vw,21px);line-height:1.65;color:#f1f6ec}
+.hero-authors>span{white-space:nowrap}
+.hero-publication sup{font-size:.7em;line-height:0;vertical-align:super;margin-left:2px}
+.hero-author-notes{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 20px;margin:10px 0 0;font-size:14px;line-height:1.6;color:#e3eadc}
+.hero-affiliation{margin:10px 0 0;font-size:clamp(14px,1.2vw,17px);line-height:1.6;color:#e3eadc;text-wrap:balance}
+@media(max-width:700px){.hero-publication{margin-top:16px}.hero-cinematic .hero-publication .hero-authors{gap:3px 12px;font-size:15px}.hero-author-notes{font-size:12px;gap:4px 14px}.hero-affiliation{font-size:13px}}
