@@ -47,4 +47,13 @@
 
 </section>
 
+<section class="section-block badminton-extension" id="badminton" aria-labelledby="badminton-title">
+<h2 class="module-title" id="badminton-title">Beyond Tennis: Humanoid Badminton</h2>
+<p>Using the same training pipeline, we also trained the G1 to play badminton in simulation.</p>
+<figure class="badminton-media" data-video-slot="badminton-simulation">
+<div class="demo-video-wrap badminton-video"><video class="demo-video" muted loop playsinline controls preload="none" data-autoplay-visible poster="./assets/video/badminton-sim-poster.jpg" aria-label="G1 humanoid badminton in MuJoCo simulation, trained with the same pipeline"><source src="./assets/video/badminton-sim.mp4" type="video/mp4"></video></div>
+<figcaption>BM-034 &middot; 30 seconds &middot; Real-time simulation</figcaption>
+</figure>
+</section>
+
 <details class="evaluation-details"><summary>Evaluation notes <span>+</span></summary><div><p>Real robot: 60 thrown balls, ball and root pose from external motion capture, 50 Hz control. Rates use all balls as the denominator; net clearance does not imply an in-court landing.</p><p>Simulation: 300 balls under nominal physics. Distance metrics cover struck balls only; landing error is measured at the first bounce. The browser demo is an illustration, not the evaluation protocol.</p></div></details>

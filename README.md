@@ -27,3 +27,9 @@ This repository is a public copy of the original project website. The original `
 The homepage loads the MuJoCo and ONNX demo directly into a Shadow DOM component when visitors scroll near it. The full-page demo is available at `rally/`. Model inference and simulation run in the visitor's browser.
 
 Keep asset URLs relative so images, videos, model files and scripts work under the `/ATHLETE/` GitHub Pages path. Update source files in `rally-src/` together with the generated files in `rally/` when changing the demo.
+
+## Humanoid badminton
+
+Using the same training pipeline, we also trained the G1 to play badminton in simulation.
+
+[![Humanoid badminton in simulation](assets/video/badminton-sim-preview.gif)](assets/video/badminton-sim.mp4)
